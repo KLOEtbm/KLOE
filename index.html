@@ -11,7 +11,6 @@
             --border-color: #222222;
             --text-primary: #f0f0f0;
             --text-secondary: #888888;
-            --accent: #d4af37;
         }
         body {
             background-color: var(--bg-color);
@@ -49,8 +48,30 @@
             color: var(--text-secondary);
             font-size: 0.8rem;
             letter-spacing: 3px;
-            margin-bottom: 40px;
+            margin-bottom: 25px;
             text-transform: uppercase;
+        }
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 35px;
+            flex-wrap: wrap;
+        }
+        .socials a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 1px solid var(--border-color);
+            padding: 6px 10px;
+            border-radius: 3px;
+            transition: all 0.2s;
+        }
+        .socials a:hover {
+            color: var(--text-primary);
+            border-color: #444;
         }
         .track-card {
             background: var(--card-bg);
@@ -59,10 +80,6 @@
             padding: 20px;
             margin-bottom: 20px;
             text-align: left;
-            transition: border-color 0.2s;
-        }
-        .track-card:hover {
-            border-color: #444;
         }
         .track-number {
             font-size: 0.75rem;
@@ -83,6 +100,28 @@
             line-height: 1.4;
             margin-bottom: 16px;
         }
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            margin-bottom: 16px;
+            background: #000;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
         .btn {
             display: block;
             width: 100%;
@@ -91,35 +130,56 @@
             color: var(--bg-color);
             text-align: center;
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
             border-radius: 3px;
             box-sizing: border-box;
-            transition: background 0.2s, transform 0.1s;
+            transition: background 0.2s;
         }
         .btn:hover {
             background: #ffffff;
         }
-        .btn:active {
-            transform: scale(0.98);
+        .btn-alt {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+        .btn-alt:hover {
+            background: var(--border-color);
+            color: #ffffff;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Replace 'portrait.jpg' with your hosted image filename or direct asset link -->
         <img src="portrait.jpg" alt="K.L.O.E." class="profile-img">
         <h1>K.L.O.E.</h1>
         <div class="subtitle">Your Evil Queen</div>
+
+        <!-- Social Links -->
+        <div class="socials">
+            <a href="https://www.youtube.com/@K.L.O.E.tbm2026" target="_blank">YouTube</a>
+            <a href="https://www.instagram.com/k.l.o.e.tbm?stkn=bmJtOTN3NWh4OGwy" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com/@k.l.o.e.tbm?_r=1&_t=ZG-99gIoiUAnS4" target="_blank">TikTok</a>
+        </div>
 
         <!-- Track 01 -->
         <div class="track-card">
             <div class="track-number">Track 01</div>
             <div class="track-title">Your Evil Queen</div>
             <div class="track-desc">An aggressive fusion of downtuned industrial metalcore and cyber-gothic lore.</div>
-            <a href="https://distrokid.com/hyperfollow/kloe6/your-evil-queen/" class="btn" target="_blank">Stream Now</a>
+            
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/ePU1aE0yuQc" allowfullscreen></iframe>
+            </div>
+
+            <div class="btn-group">
+                <a href="https://open.spotify.com/album/1EajTNN44s5qY5DPhGiXLS" class="btn" target="_blank">Spotify</a>
+                <a href="https://music.apple.com/us/album/your-evil-queen-single/6785144583" class="btn btn-alt" target="_blank">Apple Music</a>
+                <a href="https://www.amazon.com/gp/product/B0H6R5VR9L?dplnkId=ac688f49-8e76-49ee-ba84-0039d68b5383" class="btn btn-alt" target="_blank">Amazon Music</a>
+            </div>
         </div>
 
         <!-- Track 02 -->
@@ -127,7 +187,14 @@
             <div class="track-number">Track 02 — Out Oct 9</div>
             <div class="track-title">In the Dark</div>
             <div class="track-desc">Midnight park descent. Sub-heavy industrial metal under pale moonlight.</div>
-            <a href="https://distrokid.com/hyperfollow/kloe6/in-the-dark/" class="btn" target="_blank">Pre-Save Hub</a>
+            
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/761b1E9vOgE" allowfullscreen></iframe>
+            </div>
+
+            <div class="btn-group">
+                <a href="https://distrokid.com/hyperfollow/kloe6/in-the-dark/" class="btn" target="_blank">Pre-Save Hub</a>
+            </div>
         </div>
     </div>
 </body>
