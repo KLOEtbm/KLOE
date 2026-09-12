@@ -6,15 +6,16 @@
     <title>K.L.O.E. | Your Evil Queen</title>
     <style>
         :root {
-            --bg-color: #050508;
-            --card-bg: #0e0e12;
-            --border-color: #22222a;
+            --card-bg: rgba(9, 9, 15, 0.88);
+            --border-color: rgba(28, 28, 38, 0.9);
             --text-primary: #f0f0f0;
-            --text-secondary: #888888;
+            --text-secondary: #999999;
         }
         body {
-            background-color: var(--bg-color);
-            background-image: radial-gradient(circle at 50% 12%, #181828 0%, #08080f 50%, var(--bg-color) 85%);
+            background-color: #000000;
+            background-image: linear-gradient(rgba(2, 2, 4, 0.82), rgba(2, 2, 4, 0.94)), url('bg.jpg');
+            background-size: cover;
+            background-position: center;
             background-attachment: fixed;
             color: var(--text-primary);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -39,6 +40,7 @@
             object-fit: cover;
             border: 2px solid var(--border-color);
             margin-bottom: 20px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
         }
         h1 {
             font-size: 1.8rem;
@@ -67,6 +69,7 @@
             letter-spacing: 1px;
             text-transform: uppercase;
             border: 1px solid var(--border-color);
+            background: rgba(0, 0, 0, 0.5);
             padding: 6px 10px;
             border-radius: 3px;
             transition: all 0.2s;
@@ -77,11 +80,14 @@
         }
         .track-card {
             background: var(--card-bg);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             border: 1px solid var(--border-color);
             border-radius: 6px;
             padding: 20px;
             margin-bottom: 20px;
             text-align: left;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
         }
         .track-number {
             font-size: 0.75rem;
@@ -129,7 +135,7 @@
             width: 100%;
             padding: 12px;
             background: var(--text-primary);
-            color: var(--bg-color);
+            color: #050505;
             text-align: center;
             text-decoration: none;
             font-size: 0.8rem;
@@ -144,7 +150,7 @@
             background: #ffffff;
         }
         .btn-alt {
-            background: transparent;
+            background: rgba(0, 0, 0, 0.4);
             color: var(--text-primary);
             border: 1px solid var(--border-color);
         }
