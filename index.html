@@ -158,31 +158,32 @@
             color: #ffffff;
         }
         
-        /* Deep Saturated Gothic Purple to Crimson Pulse */
-        @keyframes gothic-pulse {
+        /* High-Contrast Cyber Cyan Glow Effect (Dark Button, Bright Text & Border) */
+        @keyframes cyan-pulse {
             0% { 
-                background-color: #581c87 !important; /* Deep Rich Purple */
-                box-shadow: 0 0 15px rgba(88, 28, 135, 0.8); 
-                border-color: #7e22ce; 
+                box-shadow: 0 0 8px rgba(0, 229, 255, 0.4); 
+                border-color: rgba(0, 229, 255, 0.6);
+                color: #00e5ff;
             }
             50% { 
-                background-color: #990000 !important; /* Deep Crimson Red */
-                box-shadow: 0 0 20px rgba(153, 0, 0, 0.9); 
-                border-color: #cc0000; 
+                box-shadow: 0 0 22px rgba(0, 229, 255, 0.9); 
+                border-color: #00e5ff;
+                color: #ffffff;
             }
             100% { 
-                background-color: #581c87 !important; 
-                box-shadow: 0 0 15px rgba(88, 28, 135, 0.8); 
-                border-color: #7e22ce; 
+                box-shadow: 0 0 8px rgba(0, 229, 255, 0.4); 
+                border-color: rgba(0, 229, 255, 0.6);
+                color: #00e5ff;
             }
         }
 
         .btn-spotify {
-            color: #ffffff !important;
-            animation: gothic-pulse 4s infinite ease-in-out;
+            background: rgba(10, 10, 20, 0.9) !important;
+            border: 2px solid #00e5ff !important;
+            animation: cyan-pulse 3s infinite ease-in-out;
         }
         .btn-spotify:hover {
-            opacity: 0.95;
+            background: rgba(0, 229, 255, 0.15) !important;
         }
     </style>
 </head>
