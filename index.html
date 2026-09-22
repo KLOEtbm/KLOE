@@ -21,14 +21,13 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            display: block;
             min-height: 100vh;
         }
         .container {
             width: 100%;
             max-width: 480px;
+            margin: 0 auto;
             padding: 40px 20px;
             box-sizing: border-box;
             text-align: center;
@@ -52,4 +51,172 @@
             color: var(--text-secondary);
             font-size: 0.8rem;
             letter-spacing: 3px;
-            margin-bottom
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 35px;
+            flex-wrap: wrap;
+        }
+        .socials a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 1px solid var(--border-color);
+            background: rgba(0, 0, 0, 0.5);
+            padding: 6px 10px;
+            border-radius: 3px;
+            transition: all 0.2s;
+        }
+        .socials a:hover {
+            color: var(--text-primary);
+            border-color: #444;
+        }
+        .track-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+        }
+        .track-number {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+        .track-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        .track-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+            margin-bottom: 16px;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            margin-top: 16px;
+            background: #000;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: var(--text-primary);
+            color: #050505;
+            text-align: center;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 3px;
+            box-sizing: border-box;
+            transition: background 0.2s;
+        }
+        .btn:hover {
+            background: #ffffff;
+        }
+        .btn-alt {
+            background: rgba(0, 0, 0, 0.4);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+        .btn-alt:hover {
+            background: var(--border-color);
+            color: #ffffff;
+        }
+        
+        /* Spotify Glowing Pulse Effect */
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 5px rgba(29, 185, 84, 0.4); border-color: rgba(29, 185, 84, 0.6); }
+            50% { box-shadow: 0 0 20px rgba(29, 185, 84, 0.9); border-color: #1DB954; }
+            100% { box-shadow: 0 0 5px rgba(29, 185, 84, 0.4); border-color: rgba(29, 185, 84, 0.6); }
+        }
+
+        .btn-spotify {
+            background: #1DB954 !important;
+            color: #ffffff !important;
+            border: 1px solid #1db954;
+            animation: pulse-glow 3s infinite;
+        }
+        .btn-spotify:hover {
+            background: #1ed760 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="portrait.jpg" alt="K.L.O.E." class="profile-img">
+        <h1>K.L.O.E.</h1>
+        <div class="subtitle">Your Evil Queen</div>
+
+        <div class="socials">
+            <a href="https://www.youtube.com/@K.L.O.E.tbm2026" target="_blank">YouTube</a>
+            <a href="https://www.instagram.com/k.l.o.e.tbm?stkn=bmJtOTN3NWh4OGwy" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com/@k.l.o.e.tbm?_r=1&_t=ZG-99gIoiUAnS4" target="_blank">TikTok</a>
+        </div>
+
+        <div class="track-card">
+            <div class="track-number">Track 01</div>
+            <div class="track-title">Your Evil Queen</div>
+            <div class="track-desc">An aggressive fusion of downtuned industrial metalcore and cyber-gothic lore.</div>
+            
+            <div class="btn-group">
+                <a href="https://open.spotify.com/album/1EajTNN44s5qY5DPhGiXLS" class="btn btn-spotify" target="_blank">Spotify</a>
+                <a href="https://music.apple.com/us/album/your-evil-queen-single/6785144583" class="btn btn-alt" target="_blank">Apple Music</a>
+                <a href="https://www.amazon.com/gp/product/B0H6R5VR9L?dplnkId=ac688f49-8e76-49ee-ba84-0039d68b5383" class="btn btn-alt" target="_blank">Amazon Music</a>
+            </div>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/ePU1aE0yuQc" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="track-card">
+            <div class="track-number">Track 02 — Out Oct 9</div>
+            <div class="track-title">In the Dark</div>
+            <div class="track-desc">Midnight park descent. Sub-heavy industrial metal under pale moonlight.</div>
+            
+            <div class="btn-group">
+                <a href="https://distrokid.com/hyperfollow/kloe6/in-the-dark/" class="btn btn-spotify" target="_blank">Pre-Save Hub</a>
+            </div>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/761b1E9vOgE" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
