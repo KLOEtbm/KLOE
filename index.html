@@ -158,32 +158,86 @@
             color: #ffffff;
         }
         
-        /* High-Contrast Cyber Cyan Glow Effect (Dark Button, Bright Text & Border) */
-        @keyframes cyan-pulse {
+        /* High-Contrast Cyber Cyan Glow Hierarchy Effect */
+        @keyframes cyan-pulse-high {
             0% { 
-                box-shadow: 0 0 8px rgba(0, 229, 255, 0.4); 
-                border-color: rgba(0, 229, 255, 0.6);
+                box-shadow: 0 0 10px rgba(0, 229, 255, 0.5); 
+                border-color: rgba(0, 229, 255, 0.8);
                 color: #00e5ff;
             }
             50% { 
-                box-shadow: 0 0 22px rgba(0, 229, 255, 0.9); 
+                box-shadow: 0 0 25px rgba(0, 229, 255, 0.95); 
                 border-color: #00e5ff;
                 color: #ffffff;
             }
             100% { 
-                box-shadow: 0 0 8px rgba(0, 229, 255, 0.4); 
-                border-color: rgba(0, 229, 255, 0.6);
+                box-shadow: 0 0 10px rgba(0, 229, 255, 0.5); 
+                border-color: rgba(0, 229, 255, 0.8);
                 color: #00e5ff;
+            }
+        }
+
+        @keyframes cyan-pulse-mid {
+            0% { 
+                box-shadow: 0 0 6px rgba(0, 229, 255, 0.3); 
+                border-color: rgba(0, 229, 255, 0.5);
+                color: var(--text-primary);
+            }
+            50% { 
+                box-shadow: 0 0 15px rgba(0, 229, 255, 0.6); 
+                border-color: rgba(0, 229, 255, 0.8);
+                color: #ffffff;
+            }
+            100% { 
+                box-shadow: 0 0 6px rgba(0, 229, 255, 0.3); 
+                border-color: rgba(0, 229, 255, 0.5);
+                color: var(--text-primary);
+            }
+        }
+
+        @keyframes cyan-pulse-low {
+            0% { 
+                box-shadow: 0 0 3px rgba(0, 229, 255, 0.15); 
+                border-color: rgba(0, 229, 255, 0.3);
+                color: var(--text-secondary);
+            }
+            50% { 
+                box-shadow: 0 0 8px rgba(0, 229, 255, 0.35); 
+                border-color: rgba(0, 229, 255, 0.5);
+                color: var(--text-primary);
+            }
+            100% { 
+                box-shadow: 0 0 3px rgba(0, 229, 255, 0.15); 
+                border-color: rgba(0, 229, 255, 0.3);
+                color: var(--text-secondary);
             }
         }
 
         .btn-spotify {
             background: rgba(10, 10, 20, 0.9) !important;
             border: 2px solid #00e5ff !important;
-            animation: cyan-pulse 3s infinite ease-in-out;
+            animation: cyan-pulse-high 3s infinite ease-in-out;
         }
         .btn-spotify:hover {
             background: rgba(0, 229, 255, 0.15) !important;
+        }
+
+        .btn-apple-glow {
+            background: rgba(10, 10, 20, 0.9) !important;
+            border: 1.5px solid rgba(0, 229, 255, 0.6) !important;
+            animation: cyan-pulse-mid 3s infinite ease-in-out;
+        }
+        .btn-apple-glow:hover {
+            background: rgba(0, 229, 255, 0.1) !important;
+        }
+
+        .btn-amazon-glow {
+            background: rgba(10, 10, 20, 0.9) !important;
+            border: 1px solid rgba(0, 229, 255, 0.35) !important;
+            animation: cyan-pulse-low 3s infinite ease-in-out;
+        }
+        .btn-amazon-glow:hover {
+            background: rgba(0, 229, 255, 0.08) !important;
         }
     </style>
 </head>
@@ -206,8 +260,8 @@
             
             <div class="btn-group">
                 <a href="https://open.spotify.com/album/1EajTNN44s5qY5DPhGiXLS" class="btn btn-spotify" target="_blank">Spotify</a>
-                <a href="https://music.apple.com/us/album/your-evil-queen-single/6785144583" class="btn btn-alt" target="_blank">Apple Music</a>
-                <a href="https://www.amazon.com/gp/product/B0H6R5VR9L?dplnkId=ac688f49-8e76-49ee-ba84-0039d68b5383" class="btn btn-alt" target="_blank">Amazon Music</a>
+                <a href="https://music.apple.com/us/album/your-evil-queen-single/6785144583" class="btn btn-alt btn-apple-glow" target="_blank">Apple Music</a>
+                <a href="https://www.amazon.com/gp/product/B0H6R5VR9L?dplnkId=ac688f49-8e76-49ee-ba84-0039d68b5383" class="btn btn-alt btn-amazon-glow" target="_blank">Amazon Music</a>
             </div>
 
             <div class="video-container">
