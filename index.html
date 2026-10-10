@@ -3,23 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>K.L.O.E. — Sovereign Metal Core & Dark Pop Empire</title>
-  <meta name="description" content="Official portal for K.L.O.E. Enter the ritual. Stream 'In the Dark' and 'Your Evil Queen' now.">
+  <title>K.L.O.E. // Official Hub</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg-black: #08080a;
-      --card-bg: rgba(16, 17, 22, 0.88);
-      --cyan-glow: #00e5ff;
-      --cyan-dim: rgba(0, 229, 255, 0.25);
-      --purple-accent: #9d4edd;
-      --text-main: #f0f2f5;
-      --text-muted: #8b92a5;
-      --border-line: rgba(0, 229, 255, 0.2);
-    }
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -27,174 +15,130 @@
     }
 
     body {
-      background-color: var(--bg-black);
-      color: var(--text-main);
+      background-color: #050608;
+      color: #e5e9f0;
       font-family: 'Montserrat', sans-serif;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 24px 16px 60px;
-      background-image: 
-        radial-gradient(circle at 50% 10%, rgba(0, 229, 255, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(157, 78, 221, 0.06) 0%, transparent 60%);
-      background-attachment: fixed;
+      padding: 20px 14px 48px;
     }
 
-    header {
-      text-align: center;
-      margin-bottom: 36px;
-      margin-top: 12px;
-    }
-
-    .brand-title {
-      font-family: 'Cinzel', serif;
-      font-size: 2.8rem;
-      font-weight: 900;
-      letter-spacing: 0.35em;
-      text-transform: uppercase;
-      color: #ffffff;
-      text-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
-      margin-bottom: 6px;
-    }
-
-    .brand-subtitle {
-      font-size: 0.85rem;
-      letter-spacing: 0.25em;
-      color: var(--cyan-glow);
-      text-transform: uppercase;
-      font-weight: 600;
-    }
-
-    main {
+    .container {
       width: 100%;
-      max-width: 640px;
+      max-width: 480px;
       display: flex;
       flex-direction: column;
-      gap: 32px;
+      gap: 20px;
     }
 
-    .track-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border-line);
-      border-radius: 12px;
-      padding: 24px 20px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(10px);
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .track-card.active-strike {
-      border-color: var(--cyan-glow);
-      box-shadow: 0 0 25px rgba(0, 229, 255, 0.22);
-    }
-
-    .tag-row {
+    /* GLOBAL STREAMING HUB PILLS */
+    .top-links {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 12px;
-    }
-
-    .track-tag {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--cyan-glow);
-    }
-
-    .status-badge {
-      font-size: 0.68rem;
-      font-weight: 800;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      padding: 3px 8px;
-      border-radius: 4px;
-      background: rgba(0, 229, 255, 0.15);
-      border: 1px solid var(--cyan-glow);
-      color: #ffffff;
-    }
-
-    .track-title {
-      font-family: 'Cinzel', serif;
-      font-size: 1.7rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
       margin-bottom: 8px;
-      color: #ffffff;
     }
 
-    .track-desc {
-      font-size: 0.86rem;
-      color: var(--text-muted);
-      line-height: 1.5;
-      margin-bottom: 20px;
-    }
-
-    .action-button {
+    .hub-btn {
       display: block;
       width: 100%;
-      padding: 14px 18px;
-      background: transparent;
-      border: 1px solid var(--cyan-glow);
-      color: var(--cyan-glow);
+      padding: 14px 16px;
+      background: #090b10;
+      border: 1.5px solid #00d2ff;
+      border-radius: 6px;
+      color: #ffffff;
       text-align: center;
       font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
+      transition: all 0.25s ease;
+    }
+
+    .hub-btn:hover {
+      background: #00d2ff;
+      color: #050608;
+      box-shadow: 0 0 20px rgba(0, 210, 255, 0.6);
+    }
+
+    /* RELEASE CARDS */
+    .release-card {
+      background: #0a0d14;
+      border: 1px solid #141b29;
+      border-radius: 10px;
+      padding: 22px 18px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    }
+
+    .card-meta {
+      font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 0.22em;
       text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 6px;
+      color: #7a889b;
+      margin-bottom: 6px;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .card-desc {
+      font-size: 0.85rem;
+      line-height: 1.45;
+      color: #9aa7b8;
       margin-bottom: 18px;
-      transition: all 0.3s ease;
-      cursor: pointer;
     }
 
-    .action-button:hover {
-      background: var(--cyan-glow);
-      color: var(--bg-black);
-      box-shadow: 0 0 20px var(--cyan-glow);
-    }
-
-    .platforms-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-
-    .platform-link {
-      padding: 10px;
+    /* PRIMARY CARD ACTION BUTTON */
+    .action-btn {
+      display: block;
+      width: 100%;
+      padding: 13px 16px;
+      background: #080c14;
+      border: 1.5px solid #00d2ff;
+      border-radius: 6px;
+      color: #00d2ff;
       text-align: center;
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--text-main);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 4px;
       text-decoration: none;
-      background: rgba(255, 255, 255, 0.03);
-      transition: background 0.2s ease, border-color 0.2s ease;
+      margin-bottom: 18px;
+      box-shadow: 0 0 12px rgba(0, 210, 255, 0.15);
+      transition: all 0.25s ease;
     }
 
-    .platform-link:hover {
-      border-color: rgba(255, 255, 255, 0.4);
-      background: rgba(255, 255, 255, 0.08);
+    .action-btn:hover {
+      background: #00d2ff;
+      color: #050608;
+      box-shadow: 0 0 22px rgba(0, 210, 255, 0.5);
     }
 
-    .video-wrapper {
+    /* VIDEO WRAPPER 16:9 */
+    .video-container {
       position: relative;
       width: 100%;
       padding-top: 56.25%;
-      border-radius: 8px;
+      border-radius: 6px;
       overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.12);
       background: #000;
+      border: 1px solid #1a2233;
     }
 
-    .video-wrapper iframe {
+    .video-container iframe {
       position: absolute;
       top: 0;
       left: 0;
@@ -202,69 +146,32 @@
       height: 100%;
       border: 0;
     }
-
-    .teaser-section {
-      text-align: center;
-      padding: 24px 16px;
-      border-top: 1px dashed rgba(255, 255, 255, 0.15);
-      margin-top: 12px;
-    }
-
-    .teaser-section h3 {
-      font-family: 'Cinzel', serif;
-      font-size: 1.1rem;
-      letter-spacing: 0.2em;
-      color: var(--text-muted);
-      margin-bottom: 6px;
-    }
-
-    .teaser-section p {
-      font-size: 0.78rem;
-      letter-spacing: 0.18em;
-      color: rgba(255, 255, 255, 0.4);
-      text-transform: uppercase;
-    }
-
-    footer {
-      margin-top: 40px;
-      font-size: 0.7rem;
-      letter-spacing: 0.25em;
-      color: rgba(255, 255, 255, 0.3);
-      text-transform: uppercase;
-    }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1 class="brand-title">K.L.O.E.</h1>
-    <p class="brand-subtitle">Sovereignty & Metal Dominance</p>
-  </header>
+  <div class="container">
 
-  <main>
+    <!-- GLOBAL STREAMING CHANNELS -->
+    <div class="top-links">
+      <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" class="hub-btn">Spotify</a>
+      <a href="https://music.apple.com" target="_blank" rel="noopener noreferrer" class="hub-btn">Apple Music</a>
+      <a href="https://music.amazon.com" target="_blank" rel="noopener noreferrer" class="hub-btn">Amazon Music</a>
+    </div>
 
-    <!-- ACTIVE STRIKE: IN THE DARK -->
-    <article class="track-card active-strike">
-      <div class="tag-row">
-        <span class="track-tag">Track 02 — Master Release</span>
-        <span class="status-badge">Out Now</span>
-      </div>
-      <h2 class="track-title">In the Dark</h2>
-      <p class="track-desc">
-        Midnight cathedral descent. Sub-heavy industrial metal colliding with razor-sharp vocal authority under pale moonlight.
+    <!-- CARD 01: IN THE DARK (STRIKE PHASE) -->
+    <article class="release-card">
+      <div class="card-meta">Track 02 — Out Now</div>
+      <h2 class="card-title">In the Dark</h2>
+      <p class="card-desc">
+        Midnight park descent. Sub-heavy industrial metal under pale moonlight.
       </p>
 
-      <a href="https://youtu.be/761b1E9vOgE" target="_blank" rel="noopener noreferrer" class="action-button">
-        Enter the Ritual — Stream Now
+      <a href="https://youtu.be/761b1E9vOgE" target="_blank" rel="noopener noreferrer" class="action-btn">
+        Stream Master Cut
       </a>
 
-      <div class="platforms-grid">
-        <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" class="platform-link">Spotify</a>
-        <a href="https://music.apple.com" target="_blank" rel="noopener noreferrer" class="platform-link">Apple Music</a>
-        <a href="https://music.amazon.com" target="_blank" rel="noopener noreferrer" class="platform-link">Amazon</a>
-      </div>
-
-      <div class="video-wrapper">
+      <div class="video-container">
         <iframe 
           src="https://www.youtube.com/embed/761b1E9vOgE" 
           title="K.L.O.E. - IN THE DARK" 
@@ -274,30 +181,21 @@
       </div>
     </article>
 
-    <!-- THE REIGN: YOUR EVIL QUEEN -->
-    <article class="track-card">
-      <div class="tag-row">
-        <span class="track-tag">Track 01 — The Reign</span>
-        <span class="status-badge">Master Cut</span>
-      </div>
-      <h2 class="track-title">Your Evil Queen</h2>
-      <p class="track-desc">
-        The genesis of absolute command. Heavy guitar architecture, unapologetic low-end pressure, and regal submission.
+    <!-- CARD 02: YOUR EVIL QUEEN (THE MONOLITH) -->
+    <article class="release-card">
+      <div class="card-meta">Track 01 — Album Cycle</div>
+      <h2 class="card-title">Your Evil Queen</h2>
+      <p class="card-desc">
+        The genesis of sovereign authority. Crushing low-end metalcore architecture.
       </p>
 
-      <a href="https://youtu.be/YOUR_EVIL_QUEEN_LINK" target="_blank" rel="noopener noreferrer" class="action-button">
-        Watch Full Master
+      <a href="https://youtu.be/YEQ_VIDEO_ID" target="_blank" rel="noopener noreferrer" class="action-btn">
+        Watch Master Video
       </a>
 
-      <div class="platforms-grid">
-        <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" class="platform-link">Spotify</a>
-        <a href="https://music.apple.com" target="_blank" rel="noopener noreferrer" class="platform-link">Apple Music</a>
-        <a href="https://music.amazon.com" target="_blank" rel="noopener noreferrer" class="platform-link">Amazon</a>
-      </div>
-
-      <div class="video-wrapper">
+      <div class="video-container">
         <iframe 
-          src="https://www.youtube.com/embed/YOUR_EVIL_QUEEN_VIDEO_ID" 
+          src="https://www.youtube.com/embed/YEQ_VIDEO_ID" 
           title="K.L.O.E. - YOUR EVIL QUEEN" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
           allowfullscreen>
@@ -305,17 +203,7 @@
       </div>
     </article>
 
-    <!-- INITIATIVE: ALBUM TWO SEED -->
-    <section class="teaser-section">
-      <h3>Album Two // The Next Convergence</h3>
-      <p>Staging grounds active • Neural core locked</p>
-    </section>
-
-  </main>
-
-  <footer>
-    &copy; 2026 K.L.O.E. All Rights Reserved. Sovereign Vault TBM.
-  </footer>
+  </div>
 
 </body>
 </html>
