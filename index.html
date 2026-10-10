@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>K.L.O.E. // Official Hub</title>
+  <title>K.L.O.E. // Sovereign Hub</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -16,126 +16,152 @@
 
     body {
       background-color: #050608;
+      background-image: linear-gradient(rgba(5, 6, 8, 0.88), rgba(5, 6, 8, 0.94)), url('bg.jpg');
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
       color: #e5e9f0;
       font-family: 'Montserrat', sans-serif;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 20px 14px 48px;
+      padding: 24px 14px 60px;
     }
 
     .container {
       width: 100%;
-      max-width: 480px;
+      max-width: 440px;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 16px;
     }
 
-    /* GLOBAL STREAMING HUB PILLS */
+    /* TOP STREAMING PILLS */
     .top-links {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
       width: 100%;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .hub-btn {
       display: block;
       width: 100%;
-      padding: 14px 16px;
-      background: #090b10;
-      border: 1.5px solid #00d2ff;
-      border-radius: 6px;
+      padding: 13px 14px;
+      background: rgba(10, 14, 22, 0.75);
+      border-radius: 4px;
       color: #ffffff;
       text-align: center;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 800;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       text-decoration: none;
-      box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
+      backdrop-filter: blur(6px);
       transition: all 0.25s ease;
     }
 
-    .hub-btn:hover {
-      background: #00d2ff;
-      color: #050608;
-      box-shadow: 0 0 20px rgba(0, 210, 255, 0.6);
+    /* SPOTIFY: HIGH-INTENSITY NEON GLOW */
+    .hub-btn.spotify {
+      border: 1.5px solid #00e5ff;
+      box-shadow: 0 0 16px rgba(0, 229, 255, 0.55), inset 0 0 8px rgba(0, 229, 255, 0.25);
+      text-shadow: 0 0 6px rgba(0, 229, 255, 0.6);
     }
 
-    /* RELEASE CARDS */
+    .hub-btn.spotify:hover {
+      background: #00e5ff;
+      color: #050608;
+      box-shadow: 0 0 25px #00e5ff, inset 0 0 10px #00e5ff;
+      text-shadow: none;
+    }
+
+    /* SECONDARY: SUBDUED COLD CONTOUR */
+    .hub-btn.subdued {
+      border: 1px solid rgba(0, 210, 255, 0.4);
+      color: #d2dbe8;
+      box-shadow: 0 0 6px rgba(0, 210, 255, 0.12);
+    }
+
+    .hub-btn.subdued:hover {
+      border-color: #00e5ff;
+      color: #ffffff;
+      box-shadow: 0 0 12px rgba(0, 229, 255, 0.35);
+    }
+
+    /* RELEASE SECTIONS */
     .release-card {
-      background: #0a0d14;
-      border: 1px solid #141b29;
-      border-radius: 10px;
-      padding: 22px 18px;
+      background: rgba(11, 14, 20, 0.85);
+      border: 1px solid rgba(25, 33, 46, 0.8);
+      border-radius: 8px;
+      padding: 20px 16px;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
     }
 
     .card-meta {
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       font-weight: 700;
       letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: #7a889b;
+      color: #6b778a;
       margin-bottom: 6px;
     }
 
     .card-title {
-      font-size: 1.5rem;
+      font-size: 1.45rem;
       font-weight: 800;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.02em;
       color: #ffffff;
       margin-bottom: 8px;
     }
 
     .card-desc {
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       line-height: 1.45;
-      color: #9aa7b8;
-      margin-bottom: 18px;
+      color: #8c98a8;
+      margin-bottom: 16px;
     }
 
-    /* PRIMARY CARD ACTION BUTTON */
+    /* ACTION BUTTON WITH SHARP CYAN CONTOUR */
     .action-btn {
       display: block;
       width: 100%;
-      padding: 13px 16px;
-      background: #080c14;
-      border: 1.5px solid #00d2ff;
-      border-radius: 6px;
-      color: #00d2ff;
+      padding: 12px 14px;
+      background: rgba(8, 11, 18, 0.85);
+      border: 1.5px solid #00e5ff;
+      border-radius: 4px;
+      color: #00e5ff;
       text-align: center;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       font-weight: 800;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       text-decoration: none;
-      margin-bottom: 18px;
-      box-shadow: 0 0 12px rgba(0, 210, 255, 0.15);
+      margin-bottom: 16px;
+      box-shadow: 0 0 14px rgba(0, 229, 255, 0.35);
       transition: all 0.25s ease;
     }
 
     .action-btn:hover {
-      background: #00d2ff;
+      background: #00e5ff;
       color: #050608;
-      box-shadow: 0 0 22px rgba(0, 210, 255, 0.5);
+      box-shadow: 0 0 22px rgba(0, 229, 255, 0.7);
     }
 
-    /* VIDEO WRAPPER 16:9 */
+    /* 16:9 VIDEO CONTAINER */
     .video-container {
       position: relative;
       width: 100%;
       padding-top: 56.25%;
-      border-radius: 6px;
+      border-radius: 4px;
       overflow: hidden;
       background: #000;
-      border: 1px solid #1a2233;
+      border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .video-container iframe {
@@ -152,14 +178,14 @@
 
   <div class="container">
 
-    <!-- GLOBAL STREAMING CHANNELS -->
+    <!-- PLATFORM STREAMING STACK -->
     <div class="top-links">
-      <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" class="hub-btn">Spotify</a>
-      <a href="https://music.apple.com" target="_blank" rel="noopener noreferrer" class="hub-btn">Apple Music</a>
-      <a href="https://music.amazon.com" target="_blank" rel="noopener noreferrer" class="hub-btn">Amazon Music</a>
+      <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" class="hub-btn spotify">Spotify</a>
+      <a href="https://music.apple.com" target="_blank" rel="noopener noreferrer" class="hub-btn subdued">Apple Music</a>
+      <a href="https://music.amazon.com" target="_blank" rel="noopener noreferrer" class="hub-btn subdued">Amazon Music</a>
     </div>
 
-    <!-- CARD 01: IN THE DARK (STRIKE PHASE) -->
+    <!-- CARD 01: IN THE DARK (PRIMARY RITUAL) -->
     <article class="release-card">
       <div class="card-meta">Track 02 — Out Now</div>
       <h2 class="card-title">In the Dark</h2>
@@ -181,21 +207,21 @@
       </div>
     </article>
 
-    <!-- CARD 02: YOUR EVIL QUEEN (THE MONOLITH) -->
+    <!-- CARD 02: YOUR EVIL QUEEN (MONOLITH) -->
     <article class="release-card">
-      <div class="card-meta">Track 01 — Album Cycle</div>
+      <div class="card-meta">Track 01 — Reigning Title</div>
       <h2 class="card-title">Your Evil Queen</h2>
       <p class="card-desc">
-        The genesis of sovereign authority. Crushing low-end metalcore architecture.
+        The genesis of sovereign authority. Heavy guitar architecture, unapologetic low-end pressure.
       </p>
 
-      <a href="https://youtu.be/YEQ_VIDEO_ID" target="_blank" rel="noopener noreferrer" class="action-btn">
+      <a href="https://youtu.be/z6p7d5m0WzU" target="_blank" rel="noopener noreferrer" class="action-btn">
         Watch Master Video
       </a>
 
       <div class="video-container">
         <iframe 
-          src="https://www.youtube.com/embed/YEQ_VIDEO_ID" 
+          src="https://www.youtube.com/embed/z6p7d5m0WzU" 
           title="K.L.O.E. - YOUR EVIL QUEEN" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
           allowfullscreen>
