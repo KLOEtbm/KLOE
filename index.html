@@ -78,7 +78,7 @@
       text-shadow: none;
     }
 
-    /* SECONDARY STREAMING BUTTONS: SUBDUED CONTOUR */
+    /* SECONDARY STREAMING BUTTONS */
     .hub-btn.subdued {
       border: 1px solid rgba(0, 210, 255, 0.35);
       color: #cad4e2;
@@ -127,7 +127,7 @@
       margin-bottom: 16px;
     }
 
-    /* CYAN CONTOUR ACTION BUTTON */
+    /* ACTION BUTTONS */
     .action-btn {
       display: block;
       width: 100%;
@@ -153,7 +153,6 @@
       box-shadow: 0 0 22px rgba(0, 229, 255, 0.7);
     }
 
-    /* SECONDARY ACTION BUTTON */
     .action-btn-secondary {
       display: block;
       width: 100%;
@@ -178,32 +177,7 @@
       box-shadow: 0 0 12px rgba(0, 229, 255, 0.3);
     }
 
-    /* FIRE! PRE-SAVE ACTION BUTTON (FLAME / AMBER CONTOUR) */
-    .action-btn-fire {
-      display: block;
-      width: 100%;
-      padding: 12px 14px;
-      background: rgba(18, 10, 8, 0.85);
-      border: 1.5px solid #ff4500;
-      border-radius: 4px;
-      color: #ff6b3d;
-      text-align: center;
-      font-size: 0.8rem;
-      font-weight: 800;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      text-decoration: none;
-      box-shadow: 0 0 14px rgba(255, 69, 0, 0.35);
-      transition: all 0.25s ease;
-    }
-
-    .action-btn-fire:hover {
-      background: #ff4500;
-      color: #050608;
-      box-shadow: 0 0 24px rgba(255, 69, 0, 0.7);
-    }
-
-    /* 16:9 VIDEO CONTAINER */
+    /* VIDEO CONTAINER */
     .video-container {
       position: relative;
       width: 100%;
@@ -222,20 +196,52 @@
       height: 100%;
       border: 0;
     }
+
+    /* SOCIAL FOOTER DOCK */
+    .social-dock {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .social-btn {
+      flex: 1 1 calc(50% - 10px);
+      padding: 10px 8px;
+      background: rgba(10, 14, 22, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 4px;
+      color: #8c98a8;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+      backdrop-filter: blur(4px);
+      transition: all 0.2s ease;
+    }
+
+    .social-btn:hover {
+      border-color: #00e5ff;
+      color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 229, 255, 0.25);
+    }
   </style>
 </head>
 <body>
 
   <div class="container">
 
-    <!-- PLATFORM STREAMING STACK (DIRECT ARTIST ARTERIES) -->
+    <!-- PLATFORM STREAMING STACK -->
     <div class="top-links">
       <a href="https://open.spotify.com/artist/72EoJiGgcnEXqrriBPCSPo?si=nAaW0nx4RDGKqrNXBZo6aQ" target="_blank" rel="noopener noreferrer" class="hub-btn spotify">Spotify</a>
       <a href="https://music.apple.com/us/artist/k-l-o-e/6784784971" target="_blank" rel="noopener noreferrer" class="hub-btn subdued">Apple Music</a>
       <a href="https://amazon.de/music/player/artists/B0H6R2X3MM/k-l-o-e" target="_blank" rel="noopener noreferrer" class="hub-btn subdued">Amazon Music</a>
     </div>
 
-    <!-- CARD 01: IN THE DARK (ACTIVE RITUAL) -->
+    <!-- CARD 01: IN THE DARK -->
     <article class="release-card">
       <div class="card-meta">Track 02 — Out Now</div>
       <h2 class="card-title">In the Dark</h2>
@@ -257,7 +263,7 @@
       </div>
     </article>
 
-    <!-- CARD 02: YOUR EVIL QUEEN (TITLE REIGN) -->
+    <!-- CARD 02: YOUR EVIL QUEEN -->
     <article class="release-card">
       <div class="card-meta">Track 01 — Reigning Title</div>
       <h2 class="card-title">Your Evil Queen</h2>
@@ -279,18 +285,13 @@
       </div>
     </article>
 
-    <!-- CARD 03: FIRE! (UPCOMING SINGLE // PRE-SAVE) -->
-    <article class="release-card">
-      <div class="card-meta" style="color: #ff6b3d;">Track 03 — Releasing Nov 6, 2026</div>
-      <h2 class="card-title">FIRE!</h2>
-      <p class="card-desc">
-        Forged in the dark, driven by flame. Explosive electronic rock meets cinematic gothic metal.
-      </p>
-
-      <a href="https://distrokid.com/hyperfollow/kloe6/fire/" target="_blank" rel="noopener noreferrer" class="action-btn-fire">
-        Pre-Save Single // HyperFollow
-      </a>
-    </article>
+    <!-- SOCIAL NETWORK DOCK -->
+    <div class="social-dock">
+      <a href="https://www.facebook.com/share/19Ydgs4Fi4/" target="_blank" rel="noopener noreferrer" class="social-btn">Facebook</a>
+      <a href="https://instagram.com/k.l.o.e.tbm" target="_blank" rel="noopener noreferrer" class="social-btn">Instagram</a>
+      <a href="https://www.tiktok.com/@k.l.o.e.tbm" target="_blank" rel="noopener noreferrer" class="social-btn">TikTok</a>
+      <a href="https://www.youtube.com/@K.L.O.E." target="_blank" rel="noopener noreferrer" class="social-btn">YouTube</a>
+    </div>
 
   </div>
 
