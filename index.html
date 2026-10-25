@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>K.L.O.E. // Sovereign Hub</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K.L.O.E. | Official Music Hub</title>
+  
   <style>
+    :root {
+      --bg-color: #08090b;
+      --card-bg: #101317;
+      --text-main: #f0f0f0;
+      --text-muted: #8a939e;
+      --neon-cyan: #00d2ff;
+      --fire-orange: #ff6b00;
+      --fire-glow: #ff4500;
+      --btn-bg: #151a21;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -16,181 +24,179 @@
     }
 
     body {
-      background-color: #050608;
-      background-image: linear-gradient(rgba(5, 6, 8, 0.75), rgba(5, 6, 8, 0.90)), url('bg.jpg');
-      background-size: cover;
-      background-position: center top;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      color: #e5e9f0;
-      font-family: 'Montserrat', sans-serif;
-      min-height: 100vh;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 24px 14px 60px;
+      justify-content: center;
+      padding: 2.5rem 1rem;
     }
 
     .container {
       width: 100%;
-      max-width: 440px;
+      max-width: 520px;
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 1.5rem;
     }
 
-    /* TOP STREAMING PILLS */
-    .top-links {
+    /* Top Main Platform Hub Buttons */
+    .platform-links {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      width: 100%;
-      margin-bottom: 6px;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
     }
 
-    .hub-btn {
+    .platform-btn {
       display: block;
       width: 100%;
-      padding: 13px 14px;
-      background: rgba(10, 14, 22, 0.78);
-      border-radius: 4px;
+      padding: 1rem;
+      background-color: var(--card-bg);
+      border: 1px solid rgba(0, 210, 255, 0.4);
+      box-shadow: 0 0 12px rgba(0, 210, 255, 0.1);
       color: #ffffff;
       text-align: center;
-      font-size: 0.82rem;
-      font-weight: 800;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
       text-decoration: none;
-      backdrop-filter: blur(6px);
-      transition: all 0.25s ease;
-    }
-
-    /* SPOTIFY: HIGH-INTENSITY CYAN BLOOM */
-    .hub-btn.spotify {
-      border: 1.5px solid #00e5ff;
-      box-shadow: 0 0 18px rgba(0, 229, 255, 0.6), inset 0 0 10px rgba(0, 229, 255, 0.3);
-      text-shadow: 0 0 8px rgba(0, 229, 255, 0.7);
-    }
-
-    .hub-btn.spotify:hover {
-      background: #00e5ff;
-      color: #050608;
-      box-shadow: 0 0 28px #00e5ff, inset 0 0 12px #00e5ff;
-      text-shadow: none;
-    }
-
-    /* SECONDARY STREAMING BUTTONS: SUBDUED CONTOUR */
-    .hub-btn.subdued {
-      border: 1px solid rgba(0, 210, 255, 0.35);
-      color: #cad4e2;
-      box-shadow: 0 0 6px rgba(0, 210, 255, 0.1);
-    }
-
-    .hub-btn.subdued:hover {
-      border-color: #00e5ff;
-      color: #ffffff;
-      box-shadow: 0 0 14px rgba(0, 229, 255, 0.35);
-    }
-
-    /* RELEASE CARDS */
-    .release-card {
-      background: rgba(11, 14, 20, 0.85);
-      border: 1px solid rgba(25, 33, 46, 0.85);
-      border-radius: 8px;
-      padding: 20px 16px;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.75);
-      backdrop-filter: blur(8px);
-    }
-
-    .card-meta {
-      font-size: 0.68rem;
       font-weight: 700;
-      letter-spacing: 0.22em;
+      font-size: 0.95rem;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      color: #6b778a;
-      margin-bottom: 6px;
-    }
-
-    .card-title {
-      font-size: 1.45rem;
-      font-weight: 800;
-      letter-spacing: 0.02em;
-      color: #ffffff;
-      margin-bottom: 8px;
-    }
-
-    .card-desc {
-      font-size: 0.82rem;
-      line-height: 1.45;
-      color: #8c98a8;
-      margin-bottom: 16px;
-    }
-
-    /* CYAN CONTOUR ACTION BUTTON */
-    .action-btn {
-      display: block;
-      width: 100%;
-      padding: 12px 14px;
-      background: rgba(8, 11, 18, 0.85);
-      border: 1.5px solid #00e5ff;
       border-radius: 4px;
-      color: #00e5ff;
-      text-align: center;
-      font-size: 0.8rem;
-      font-weight: 800;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      text-decoration: none;
-      margin-bottom: 16px;
-      box-shadow: 0 0 14px rgba(0, 229, 255, 0.35);
       transition: all 0.25s ease;
     }
 
-    .action-btn:hover {
-      background: #00e5ff;
-      color: #050608;
-      box-shadow: 0 0 22px rgba(0, 229, 255, 0.7);
+    .platform-btn:hover {
+      border-color: var(--neon-cyan);
+      box-shadow: 0 0 20px rgba(0, 210, 255, 0.4);
+      background-color: #171d26;
+      transform: translateY(-1px);
     }
 
-    /* SECONDARY ACTION BUTTON */
-    .action-btn-secondary {
-      display: block;
-      width: 100%;
-      padding: 10px 14px;
-      background: rgba(14, 18, 26, 0.7);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 4px;
-      color: #ffffff;
-      text-align: center;
-      font-size: 0.74rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      text-decoration: none;
-      margin-bottom: 16px;
-      transition: all 0.25s ease;
-    }
-
-    .action-btn-secondary:hover {
-      border-color: #00e5ff;
-      color: #00e5ff;
-      box-shadow: 0 0 12px rgba(0, 229, 255, 0.3);
-    }
-
-    /* 16:9 VIDEO CONTAINER */
-    .video-container {
+    /* Track Cards Base */
+    .track-card {
+      background-color: var(--card-bg);
+      border-radius: 6px;
+      padding: 1.5rem;
       position: relative;
-      width: 100%;
-      padding-top: 56.25%;
-      border-radius: 4px;
-      overflow: hidden;
-      background: #000;
-      border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .video-container iframe {
+    .track-meta {
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .track-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+    }
+
+    .track-desc {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Action Buttons Inside Cards */
+    .action-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 0.85rem;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border-radius: 4px;
+      transition: all 0.25s ease;
+    }
+
+    /* TRACK 03: FIRE! Theme Styling */
+    .fire-card {
+      border: 1px solid rgba(255, 107, 0, 0.55);
+      box-shadow: 0 0 20px rgba(255, 69, 0, 0.15);
+    }
+
+    .fire-card:hover {
+      border-color: rgba(255, 120, 0, 0.9);
+      box-shadow: 0 0 28px rgba(255, 69, 0, 0.35);
+    }
+
+    .fire-card .track-meta {
+      color: #ffaa5a;
+    }
+
+    .btn-fire-primary {
+      background: transparent;
+      border: 1px solid var(--fire-orange);
+      color: #ffaa5a;
+      box-shadow: inset 0 0 10px rgba(255, 107, 0, 0.2);
+    }
+
+    .btn-fire-primary:hover {
+      background: var(--fire-orange);
+      color: #050505;
+      box-shadow: 0 0 22px rgba(255, 107, 0, 0.8);
+    }
+
+    .btn-fire-secondary {
+      background: transparent;
+      border: 1px solid #4a2810;
+      color: #d18d58;
+    }
+
+    .btn-fire-secondary:hover {
+      border-color: var(--fire-orange);
+      color: #ffffff;
+      background: #24140b;
+    }
+
+    /* TRACK 02 & 01: Cyan / Standard Theme Styling */
+    .cyan-card {
+      border: 1px solid rgba(0, 210, 255, 0.25);
+    }
+
+    .cyan-card .track-meta {
+      color: var(--neon-cyan);
+    }
+
+    .btn-cyan {
+      background: transparent;
+      border: 1px solid var(--neon-cyan);
+      color: var(--neon-cyan);
+      box-shadow: inset 0 0 8px rgba(0, 210, 255, 0.15);
+    }
+
+    .btn-cyan:hover {
+      background: var(--neon-cyan);
+      color: #050505;
+      box-shadow: 0 0 18px rgba(0, 210, 255, 0.6);
+    }
+
+    /* Embedded Video Frame */
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+      border-radius: 4px;
+      margin-top: 1.25rem;
+      border: 1px solid #222933;
+    }
+
+    .video-wrapper iframe {
       position: absolute;
       top: 0;
       left: 0;
@@ -202,30 +208,60 @@
 </head>
 <body>
 
-  <div class="container">
+  <main class="container">
 
-    <!-- PLATFORM STREAMING STACK (DIRECT ARTIST ARTERIES) -->
-    <div class="top-links">
-      <a href="https://open.spotify.com/artist/72EoJiGgcnEXqrriBPCSPo?si=nAaW0nx4RDGKqrNXBZo6aQ" target="_blank" rel="noopener noreferrer" class="hub-btn spotify">Spotify</a>
-      <a href="https://music.apple.com/us/artist/k-l-o-e/6784784971" target="_blank" rel="noopener noreferrer" class="hub-btn subdued">Apple Music</a>
-      <a href="https://amazon.de/music/player/artists/B0H6R2X3MM/k-l-o-e" target="_blank" rel="noopener noreferrer" class="hub-btn subdued">Amazon Music</a>
-    </div>
+    <!-- PRIMARY PLATFORM HUBS -->
+    <section class="platform-links">
+      <a href="https://open.spotify.com/artist/YOUR_SPOTIFY_ID" target="_blank" class="platform-btn">
+        SPOTIFY
+      </a>
+      <a href="https://music.apple.com/artist/k-l-o-e/YOUR_APPLE_ID" target="_blank" class="platform-btn">
+        APPLE MUSIC
+      </a>
+      <a href="https://music.amazon.com/artists/YOUR_AMAZON_ID" target="_blank" class="platform-btn">
+        AMAZON MUSIC
+      </a>
+    </section>
 
-    <!-- CARD 01: IN THE DARK (ACTIVE RITUAL) -->
-    <article class="release-card">
-      <div class="card-meta">Track 02 — Out Now</div>
-      <h2 class="card-title">In the Dark</h2>
-      <p class="card-desc">
+    <!-- TRACK 03: FIRE! (PRE-RELEASE) -->
+    <article class="track-card fire-card">
+      <div class="track-meta">TRACK 03 — PRE-RELEASE // AVAILABLE NOV 6, 2026</div>
+      <h2 class="track-title">FIRE!</h2>
+      <p class="track-desc">
+        Immortal rebirth through ancient flame. Heavy dark-alternative rock and soaring cinematic piano.
+      </p>
+
+      <div class="action-buttons">
+        <!-- Replace with your DistroKid HyperFollow URL -->
+        <a href="https://distrokid.com/hyperfollow/YOUR_LINK" target="_blank" class="btn btn-fire-primary">
+          PRE-SAVE ON SPOTIFY
+        </a>
+
+        <!-- Replace with your scheduled YouTube Premiere URL -->
+        <a href="https://youtube.com/watch?v=YOUR_PREMIERE_ID" target="_blank" class="btn btn-fire-secondary">
+          YOUTUBE PREMIERE REMINDER
+        </a>
+      </div>
+    </article>
+
+    <!-- TRACK 02: IN THE DARK -->
+    <article class="track-card cyan-card">
+      <div class="track-meta">TRACK 02 — OUT NOW</div>
+      <h2 class="track-title">In the Dark</h2>
+      <p class="track-desc">
         Midnight park descent. Sub-heavy industrial metal under pale moonlight.
       </p>
 
-      <a href="https://distrokid.com/hyperfollow/kloe6/in-the-dark/" target="_blank" rel="noopener noreferrer" class="action-btn">
-        Enter The Ritual // All Platforms
-      </a>
+      <div class="action-buttons">
+        <a href="YOUR_IN_THE_DARK_STREAMING_LINK" target="_blank" class="btn btn-cyan">
+          ENTER THE RITUAL // ALL PLATFORMS
+        </a>
+      </div>
 
-      <div class="video-container">
+      <!-- YouTube Embed -->
+      <div class="video-wrapper">
         <iframe 
-          src="https://www.youtube-nocookie.com/embed/761b1E9vOgE" 
+          src="https://www.youtube.com/embed/YOUR_IN_THE_DARK_VIDEO_ID" 
           title="K.L.O.E. - IN THE DARK" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
           allowfullscreen>
@@ -233,51 +269,22 @@
       </div>
     </article>
 
-    <!-- CARD 02: YOUR EVIL QUEEN (TITLE REIGN) -->
-    <article class="release-card">
-      <div class="card-meta">Track 01 — Reigning Title</div>
-      <h2 class="card-title">Your Evil Queen</h2>
-      <p class="card-desc">
+    <!-- TRACK 01: YOUR EVIL QUEEN -->
+    <article class="track-card cyan-card">
+      <div class="track-meta">TRACK 01 — REIGNING TITLE</div>
+      <h2 class="track-title">Your Evil Queen</h2>
+      <p class="track-desc">
         The genesis of sovereign authority. Crushing low-end metalcore architecture.
       </p>
 
-      <a href="https://distrokid.com/hyperfollow/kloe6/your-evil-queen/" target="_blank" rel="noopener noreferrer" class="action-btn-secondary">
-        All Streaming Platforms
-      </a>
-
-      <div class="video-container">
-        <iframe 
-          src="https://www.youtube-nocookie.com/embed/ePU1aE0yuQc" 
-          title="K.L.O.E. - YOUR EVIL QUEEN" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen>
-        </iframe>
+      <div class="action-buttons">
+        <a href="YOUR_YOUR_EVIL_QUEEN_STREAMING_LINK" target="_blank" class="btn btn-cyan">
+          ALL STREAMING PLATFORMS
+        </a>
       </div>
     </article>
 
-    <!-- CARD 03: FIRE! (UPCOMING PREMIERE & PRE-SAVE) -->
-    <article class="release-card">
-      <div class="card-meta">Track 03 — Upcoming Premiere</div>
-      <h2 class="card-title">FIRE!</h2>
-      <p class="card-desc">
-        Pre-save the upcoming release. Watch the official music video premiere.
-      </p>
-
-      <a href="https://distrokid.com/hyperfollow/kloe6/fire-2/" target="_blank" rel="noopener noreferrer" class="action-btn-secondary">
-        Pre-Save On Spotify // All Platforms
-      </a>
-
-      <div class="video-container">
-        <iframe 
-          src="https://www.youtube-nocookie.com/embed/rRVBo4aTWx0" 
-          title="K.L.O.E. - FIRE!" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen>
-        </iframe>
-      </div>
-    </article>
-
-  </div>
+  </main>
 
 </body>
 </html>
