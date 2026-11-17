@@ -28,7 +28,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 24px 14px 60px;
+      padding: 20px 14px 60px;
     }
 
     .container {
@@ -39,13 +39,63 @@
       gap: 16px;
     }
 
+    /* ARTIST HERO BANNER */
+    .hero-banner {
+      position: relative;
+      width: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1.5px solid rgba(0, 229, 255, 0.45);
+      box-shadow: 0 0 24px rgba(0, 229, 255, 0.18), 0 12px 35px rgba(0, 0, 0, 0.85);
+      background: #080a0f;
+    }
+
+    .hero-banner img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(5, 6, 8, 0.05) 45%,
+        rgba(5, 6, 8, 0.78) 82%,
+        rgba(5, 6, 8, 0.96) 100%
+      );
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 16px;
+    }
+
+    .hero-title {
+      font-size: 1.65rem;
+      font-weight: 900;
+      letter-spacing: 0.24em;
+      color: #ffffff;
+      text-shadow: 0 0 14px rgba(0, 229, 255, 0.55);
+      line-height: 1.1;
+    }
+
+    .hero-subtitle {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #00e5ff;
+      margin-top: 4px;
+    }
+
     /* TOP STREAMING PILLS */
     .top-links {
       display: flex;
       flex-direction: column;
       gap: 10px;
       width: 100%;
-      margin-bottom: 6px;
     }
 
     .hub-btn {
@@ -90,6 +140,147 @@
       border-color: #00e5ff;
       color: #ffffff;
       box-shadow: 0 0 14px rgba(0, 229, 255, 0.35);
+    }
+
+    /* 6-TAB TWO-COLUMN GRID (LEFT: SOCIALS | RIGHT: LORE & INFO) */
+    .mini-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .mini-col {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .col-label {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #6b778a;
+      text-align: center;
+      margin-bottom: 2px;
+    }
+
+    .mini-tab {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 10px 8px;
+      background: rgba(11, 15, 24, 0.82);
+      border: 1px solid rgba(0, 210, 255, 0.28);
+      border-radius: 4px;
+      color: #cfd8e6;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      backdrop-filter: blur(6px);
+      transition: all 0.22s ease;
+    }
+
+    .mini-tab:hover {
+      border-color: #00e5ff;
+      color: #ffffff;
+      box-shadow: 0 0 12px rgba(0, 229, 255, 0.28);
+    }
+
+    /* RIGHT-SIDE INFO TABS ACCENT */
+    .mini-tab.info-tab {
+      border-color: rgba(255, 107, 0, 0.35);
+      color: #e2d5cc;
+    }
+
+    .mini-tab.info-tab:hover,
+    .mini-tab.info-tab.active {
+      border-color: #ff6b00;
+      background: rgba(255, 107, 0, 0.14);
+      color: #ffaa5a;
+      box-shadow: 0 0 14px rgba(255, 107, 0, 0.35);
+    }
+
+    /* EXPANDABLE INFO DRAWER */
+    .info-drawer {
+      display: none;
+      background: rgba(11, 14, 20, 0.92);
+      border: 1px solid rgba(255, 107, 0, 0.55);
+      border-radius: 6px;
+      padding: 18px 16px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.8), 0 0 18px rgba(255, 107, 0, 0.15);
+      backdrop-filter: blur(8px);
+      animation: fadeSlide 0.22s ease;
+    }
+
+    .info-drawer.open {
+      display: block;
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .drawer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .drawer-title {
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #ff914d;
+    }
+
+    .drawer-close {
+      background: none;
+      border: none;
+      color: #8c98a8;
+      font-size: 1.15rem;
+      line-height: 1;
+      cursor: pointer;
+      padding: 2px 6px;
+    }
+
+    .drawer-close:hover {
+      color: #ffffff;
+    }
+
+    .drawer-text {
+      font-size: 0.81rem;
+      line-height: 1.6;
+      color: #cfd8e6;
+    }
+
+    .drawer-text p + p {
+      margin-top: 10px;
+    }
+
+    .drawer-text strong {
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .drawer-text a {
+      color: #00e5ff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .drawer-text a:hover {
+      text-decoration: underline;
     }
 
     /* RELEASE CARDS BASE */
@@ -247,11 +438,48 @@
 
   <div class="container">
 
-    <!-- PLATFORM STREAMING STACK (DIRECT ARTIST ARTERIES) -->
+    <!-- ARTIST HERO HEADER -->
+    <header class="hero-banner">
+      <img src="hero.jpg" alt="K.L.O.E.">
+      <div class="hero-overlay">
+        <h1 class="hero-title">K.L.O.E.</h1>
+        <p class="hero-subtitle">Industrial Alt-Metal // Official Hub</p>
+      </div>
+    </header>
+
+    <!-- PLATFORM STREAMING STACK -->
     <div class="top-links">
       <a href="https://open.spotify.com/artist/72EoJiGgcnEXqrriBPCSPo?si=nAaW0nx4RDGKqrNXBZo6aQ" target="_blank" rel="noopener noreferrer" class="hub-btn spotify">Spotify</a>
       <a href="https://music.apple.com/us/artist/k-l-o-e/6784784971" target="_blank" rel="noopener noreferrer" class="hub-btn subdued">Apple Music</a>
       <a href="https://amazon.de/music/player/artists/B0H6R2X3MM/k-l-o-e" target="_blank" rel="noopener noreferrer" class="hub-btn subdued">Amazon Music</a>
+    </div>
+
+    <!-- 6-TAB GRID: LEFT (SOCIALS) | RIGHT (PROJECT DOSSIER) -->
+    <div class="mini-grid">
+      <!-- LEFT COLUMN: SOCIAL LINKS -->
+      <div class="mini-col">
+        <div class="col-label">Follow</div>
+        <a href="https://www.tiktok.com/@k.l.o.e.tbm?_r=1&_t=ZG-9AZz8FgFUvJ" target="_blank" rel="noopener noreferrer" class="mini-tab">TikTok</a>
+        <a href="https://www.instagram.com/k.l.o.e.tbm?srtk=bmJtOTN3NWh4OGwy" target="_blank" rel="noopener noreferrer" class="mini-tab">Instagram</a>
+        <a href="https://www.facebook.com/share/1EsmfFKuAJ/" target="_blank" rel="noopener noreferrer" class="mini-tab">Facebook</a>
+      </div>
+
+      <!-- RIGHT COLUMN: EXPANDABLE INFO TABS -->
+      <div class="mini-col">
+        <div class="col-label">Dossier</div>
+        <button type="button" class="mini-tab info-tab" data-panel="bio">Who Is K.L.O.E.</button>
+        <button type="button" class="mini-tab info-tab" data-panel="craft">The Hybrid Craft</button>
+        <button type="button" class="mini-tab info-tab" data-panel="press">Press & Contact</button>
+      </div>
+    </div>
+
+    <!-- EXPANDABLE INFO DRAWER (OPENS WHEN RIGHT TABS ARE TAPPED) -->
+    <div id="info-drawer" class="info-drawer" aria-live="polite">
+      <div class="drawer-header">
+        <span id="drawer-title" class="drawer-title"></span>
+        <button type="button" id="drawer-close" class="drawer-close" aria-label="Close">&times;</button>
+      </div>
+      <div id="drawer-text" class="drawer-text"></div>
     </div>
 
     <!-- CARD 01: FIRE! (ACTIVE NEW RELEASE) -->
@@ -321,6 +549,56 @@
     </article>
 
   </div>
+
+  <script>
+    const dossiers = {
+      bio: {
+        title: "Who Is K.L.O.E.",
+        html: "<p><strong>K.L.O.E.</strong> is a dark alternative and industrial metal project built around a fierce, unapologetic frontwoman persona. Blending crushing low-end guitars, atmospheric electronics, and soaring vocal hooks, the project explores inner tension, defiance, and emotional resilience—turning raw struggle into heavy, modern anthems.</p><p>Rather than hiding behind polished perfection, K.L.O.E. embraces contrast: cold industrial precision colliding with dark cinematic drama, intimate vulnerability erupting into full-force metalcore aggression. Every release is designed as both a sonic punch and a visual chapter, inviting listeners into a world where shadows become strength.</p>"
+      },
+      craft: {
+        title: "The Hybrid Craft",
+        html: "<p><strong>K.L.O.E.</strong> operates as a deliberate hybrid artistic project—bridging human musicianship and studio craft with next-generation vocal synthesis. Every song begins with human songwriting, lyricism, Drop-A rhythm guitar architecture, synth arrangement, and hands-on mixing and mastering engineered for physical weight and clarity.</p><p>Instead of treating AI as a shortcut, the project uses an AI-driven vocal persona as a dedicated instrument—shaped, phrased, and integrated into a real heavy-music production workflow. Two distinct worlds colliding intentionally to push modern alternative metal into uncharted territory.</p>"
+      },
+      press: {
+        title: "Press, Sync & Direct Contact",
+        html: "<p>For interviews, magazine features, playlist curation, or press kit requests, reach out directly at <a href='mailto:k.l.o.e.tbm@gmail.com'>k.l.o.e.tbm@gmail.com</a>. New single releases and visual chapters drop regularly across all major streaming platforms.</p>"
+      }
+    };
+
+    const tabs = document.querySelectorAll('.info-tab');
+    const drawer = document.getElementById('info-drawer');
+    const drawerTitle = document.getElementById('drawer-title');
+    const drawerText = document.getElementById('drawer-text');
+    const drawerClose = document.getElementById('drawer-close');
+    let activeKey = null;
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const key = tab.dataset.panel;
+
+        if (activeKey === key && drawer.classList.contains('open')) {
+          drawer.classList.remove('open');
+          tab.classList.remove('active');
+          activeKey = null;
+          return;
+        }
+
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        drawerTitle.textContent = dossiers[key].title;
+        drawerText.innerHTML = dossiers[key].html;
+        drawer.classList.add('open');
+        activeKey = key;
+      });
+    });
+
+    drawerClose.addEventListener('click', () => {
+      drawer.classList.remove('open');
+      tabs.forEach(t => t.classList.remove('active'));
+      activeKey = null;
+    });
+  </script>
 
 </body>
 </html>
