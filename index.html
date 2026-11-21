@@ -331,23 +331,23 @@
       text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
     }
 
-    /* CARD 01: FIRE! THEME STYLING */
-    .release-card.fire-card {
+    /* FEATURED SPOTLIGHT CARD: ORANGE THEME STYLING */
+    .release-card.spotlight-card {
       border: 1.5px solid rgba(255, 107, 0, 0.72);
       box-shadow: 0 0 25px rgba(255, 69, 0, 0.22), 0 12px 35px rgba(0, 0, 0, 0.85);
     }
 
-    .release-card.fire-card:hover {
+    .release-card.spotlight-card:hover {
       border-color: rgba(255, 120, 0, 0.95);
       box-shadow: 0 0 35px rgba(255, 69, 0, 0.4), 0 12px 35px rgba(0, 0, 0, 0.85);
     }
 
-    .release-card.fire-card .card-meta {
+    .release-card.spotlight-card .card-meta {
       color: #ff914d;
     }
 
-    /* FIRE ACTION BUTTON (70% TRANSPARENT) */
-    .action-btn-fire {
+    /* ORANGE ACTION BUTTON (70% TRANSPARENT) */
+    .action-btn-orange {
       display: block;
       width: 100%;
       padding: 12px 14px;
@@ -367,7 +367,7 @@
       transition: all 0.25s ease;
     }
 
-    .action-btn-fire:hover {
+    .action-btn-orange:hover {
       background: #ff6b00;
       color: #050608;
       box-shadow: 0 0 26px #ff6b00, inset 0 0 10px #ff6b00;
@@ -375,7 +375,7 @@
     }
 
     /* CYAN CONTOUR ACTION BUTTON (70% TRANSPARENT) */
-    .action-btn {
+    .action-btn-cyan {
       display: block;
       width: 100%;
       padding: 12px 14px;
@@ -394,18 +394,18 @@
       transition: all 0.25s ease;
     }
 
-    .action-btn:hover {
+    .action-btn-cyan:hover {
       background: #00e5ff;
       color: #050608;
       box-shadow: 0 0 22px rgba(0, 229, 255, 0.7);
     }
 
-    /* SECONDARY ACTION BUTTON (70% TRANSPARENT) */
-    .action-btn-secondary {
+    /* BLACK / SUBDUED ACTION BUTTON (70% TRANSPARENT) */
+    .action-btn-black {
       display: block;
       width: 100%;
       padding: 10px 14px;
-      background: rgba(14, 18, 26, 0.30);
+      background: rgba(5, 6, 8, 0.65);
       border: 1px solid rgba(255, 255, 255, 0.28);
       border-radius: 4px;
       color: #ffffff;
@@ -419,7 +419,7 @@
       transition: all 0.25s ease;
     }
 
-    .action-btn-secondary:hover {
+    .action-btn-black:hover {
       border-color: #00e5ff;
       color: #00e5ff;
       box-shadow: 0 0 12px rgba(0, 229, 255, 0.3);
@@ -494,15 +494,37 @@
       <div id="drawer-text" class="drawer-text"></div>
     </div>
 
-    <!-- CARD 01: FIRE! (ACTIVE NEW RELEASE) -->
-    <article class="release-card fire-card">
+    <!-- CARD 04: STAY TUNED (ORANGE SPOTLIGHT) -->
+    <article class="release-card spotlight-card">
+      <div class="card-meta">Track 04 — Out Dec 4</div>
+      <h2 class="card-title">STAY TUNED</h2>
+      <p class="card-desc">
+        The broadcast is hijacked. Heavy Drop-A guitars collide with industrial static.
+      </p>
+
+      <a href="https://distrokid.com/hyperfollow/kloe6/stay-tuned-2/" target="_blank" rel="noopener noreferrer" class="action-btn-orange">
+        Pre-Save Now // All Platforms
+      </a>
+
+      <div class="video-container">
+        <iframe 
+          src="https://www.youtube-nocookie.com/embed/JLcHzaamgDY" 
+          title="K.L.O.E. - STAY TUNED" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </article>
+
+    <!-- CARD 03: FIRE! (CYAN TAB) -->
+    <article class="release-card">
       <div class="card-meta">Track 03 — Out Now</div>
       <h2 class="card-title">FIRE!</h2>
       <p class="card-desc">
         The inferno is unleashed. High-energy industrial metalcore and burning keys.
       </p>
 
-      <a href="https://distrokid.com/hyperfollow/kloe6/fire-2/" target="_blank" rel="noopener noreferrer" class="action-btn-fire">
+      <a href="https://distrokid.com/hyperfollow/kloe6/fire-2/" target="_blank" rel="noopener noreferrer" class="action-btn-cyan">
         Ignite The Flame // All Platforms
       </a>
 
@@ -516,7 +538,7 @@
       </div>
     </article>
 
-    <!-- CARD 02: IN THE DARK (PREVIOUS RELEASE) -->
+    <!-- CARD 02: IN THE DARK (BLACK TAB) -->
     <article class="release-card">
       <div class="card-meta">Track 02 — Out Now</div>
       <h2 class="card-title">In the Dark</h2>
@@ -524,7 +546,7 @@
         Midnight park descent. Sub-heavy industrial metal under pale moonlight.
       </p>
 
-      <a href="https://distrokid.com/hyperfollow/kloe6/in-the-dark/" target="_blank" rel="noopener noreferrer" class="action-btn">
+      <a href="https://distrokid.com/hyperfollow/kloe6/in-the-dark/" target="_blank" rel="noopener noreferrer" class="action-btn-black">
         Enter The Ritual // All Platforms
       </a>
 
@@ -538,7 +560,7 @@
       </div>
     </article>
 
-    <!-- CARD 03: YOUR EVIL QUEEN (TITLE REIGN) -->
+    <!-- CARD 01: YOUR EVIL QUEEN (BLACK TAB) -->
     <article class="release-card">
       <div class="card-meta">Track 01 — Reigning Title</div>
       <h2 class="card-title">Your Evil Queen</h2>
@@ -546,7 +568,7 @@
         The genesis of sovereign authority. Crushing low-end metalcore architecture.
       </p>
 
-      <a href="https://distrokid.com/hyperfollow/kloe6/your-evil-queen/" target="_blank" rel="noopener noreferrer" class="action-btn-secondary">
+      <a href="https://distrokid.com/hyperfollow/kloe6/your-evil-queen/" target="_blank" rel="noopener noreferrer" class="action-btn-black">
         All Streaming Platforms
       </a>
 
