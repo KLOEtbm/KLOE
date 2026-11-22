@@ -106,11 +106,13 @@
       border-radius: 4px;
       color: #ffffff;
       text-align: center;
+      font-family: 'Montserrat', sans-serif;
       font-size: 0.82rem;
       font-weight: 800;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       text-decoration: none;
+      cursor: pointer;
       backdrop-filter: blur(3px);
       -webkit-backdrop-filter: blur(3px);
       transition: all 0.25s ease;
@@ -138,7 +140,8 @@
       text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
     }
 
-    .hub-btn.subdued:hover {
+    .hub-btn.subdued:hover,
+    .hub-btn.subdued.active {
       border-color: #00e5ff;
       background: rgba(0, 229, 255, 0.18);
       color: #ffffff;
@@ -230,6 +233,16 @@
 
     .info-drawer.open {
       display: block;
+    }
+
+    /* CYAN VARIANT FOR WALLPAPER DRAWER */
+    .info-drawer.cyan-drawer {
+      border-color: rgba(0, 229, 255, 0.6);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.8), 0 0 18px rgba(0, 229, 255, 0.18);
+    }
+
+    .info-drawer.cyan-drawer .drawer-title {
+      color: #00e5ff;
     }
 
     @keyframes fadeSlide {
@@ -444,6 +457,51 @@
       height: 100%;
       border: 0;
     }
+
+    /* WALLPAPER GRID INSIDE DRAWER */
+    .wallpaper-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .wp-item {
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: #050608;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wp-item img {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      object-fit: cover;
+      display: block;
+    }
+
+    .wp-download {
+      display: block;
+      width: 100%;
+      padding: 8px 6px;
+      background: rgba(8, 12, 20, 0.92);
+      border-top: 1px solid rgba(0, 229, 255, 0.35);
+      color: #00e5ff;
+      text-align: center;
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .wp-download:hover {
+      background: #00e5ff;
+      color: #050608;
+    }
   </style>
 </head>
 <body>
@@ -582,10 +640,64 @@
       </div>
     </article>
 
-    <!-- FREE WALLPAPERS VAULT LINK -->
-    <a href="wallpapers.html" class="hub-btn subdued">
+    <!-- FREE WALLPAPERS DRAWER TRIGGER BUTTON -->
+    <button type="button" id="wp-toggle" class="hub-btn subdued">
       Free 9:16 Wallpapers // Fan Vault
-    </a>
+    </button>
+
+    <!-- EXPANDABLE WALLPAPER DRAWER (HIDDEN UNTIL BUTTON IS TAPPED) -->
+    <div id="wp-drawer" class="info-drawer cyan-drawer" aria-live="polite">
+      <div class="drawer-header">
+        <span class="drawer-title">Free 9:16 Wallpapers // Pack 01</span>
+        <button type="button" id="wp-close" class="drawer-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="drawer-text">
+        <p>OLED dark lock screens engineered for your phone. Tap download to save full resolution.</p>
+      </div>
+
+      <div class="wallpaper-grid">
+        <div class="wp-item">
+          <img src="wallpapers/wp-01.jpg" alt="K.L.O.E. Wallpaper 01" loading="lazy">
+          <a href="wallpapers/wp-01.jpg" download="KLOE-Wallpaper-01.jpg" class="wp-download">Download 01</a>
+        </div>
+        <div class="wp-item">
+          <img src="wallpapers/wp-02.jpg" alt="K.L.O.E. Wallpaper 02" loading="lazy">
+          <a href="wallpapers/wp-02.jpg" download="KLOE-Wallpaper-02.jpg" class="wp-download">Download 02</a>
+        </div>
+        <div class="wp-item">
+          <img src="wallpapers/wp-03.jpg" alt="K.L.O.E. Wallpaper 03" loading="lazy">
+          <a href="wallpapers/wp-03.jpg" download="KLOE-Wallpaper-03.jpg" class="wp-download">Download 03</a>
+        </div>
+        <div class="wp-item">
+          <img src="wallpapers/wp-04.jpg" alt="K.L.O.E. Wallpaper 04" loading="lazy">
+          <a href="wallpapers/wp-04.jpg" download="KLOE-Wallpaper-04.jpg" class="wp-download">Download 04</a>
+        </div>
+        <div class="wp-item">
+          <img src="wallpapers/wp-05.jpg" alt="K.L.O.E. Wallpaper 05" loading="lazy">
+          <a href="wallpapers/wp-05.jpg" download="KLOE-Wallpaper-05.jpg" class="wp-download">Download 05</a>
+        </div>
+        <div class="wp-item">
+          <img src="wallpapers/wp-06.jpg" alt="K.L.O.E. Wallpaper 06" loading="lazy">
+          <a href="wallpapers/wp-06.jpg" download="KLOE-Wallpaper-06.jpg" class="wp-download">Download 06</a>
+        </div>
+        <div class="wp-item">
+          <img src="wallpapers/wp-07.jpg" alt="K.L.O.E. Wallpaper 07" loading="lazy">
+          <a href="wallpapers/wp-07.jpg" download="KLOE-Wallpaper-07.jpg" class="wp-download">Download 07</a>
+        </div>
+        <div class="wp-item">
+          <img src="wallpapers/wp-08.jpg" alt="K.L.O.E. Wallpaper 08" loading="lazy">
+          <a href="wallpapers/wp-08.jpg" download="KLOE-Wallpaper-08.jpg" class="wp-download">Download 08</a>
+        </div>
+        <div class="wp-item">
+          <img src="wallpapers/wp-09.jpg" alt="K.L.O.E. Wallpaper 09" loading="lazy">
+          <a href="wallpapers/wp-09.jpg" download="KLOE-Wallpaper-09.jpg" class="wp-download">Download 09</a>
+        </div>
+        <div class="wp-item">
+          <img src="wallpapers/wp-10.jpg" alt="K.L.O.E. Wallpaper 10" loading="lazy">
+          <a href="wallpapers/wp-10.jpg" download="KLOE-Wallpaper-10.jpg" class="wp-download">Download 10</a>
+        </div>
+      </div>
+    </div>
 
   </div>
 
@@ -636,6 +748,24 @@
       drawer.classList.remove('open');
       tabs.forEach(t => t.classList.remove('active'));
       activeKey = null;
+    });
+
+    /* WALLPAPERS DRAWER TOGGLE */
+    const wpToggle = document.getElementById('wp-toggle');
+    const wpDrawer = document.getElementById('wp-drawer');
+    const wpClose = document.getElementById('wp-close');
+
+    wpToggle.addEventListener('click', () => {
+      const isOpen = wpDrawer.classList.toggle('open');
+      wpToggle.classList.toggle('active', isOpen);
+      if (isOpen) {
+        wpDrawer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    });
+
+    wpClose.addEventListener('click', () => {
+      wpDrawer.classList.remove('open');
+      wpToggle.classList.remove('active');
     });
   </script>
 
