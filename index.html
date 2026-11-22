@@ -444,6 +444,61 @@
       height: 100%;
       border: 0;
     }
+
+    /* FREE WALLPAPERS GALLERY */
+    .wallpaper-card {
+      border: 1.5px solid rgba(0, 229, 255, 0.45);
+      box-shadow: 0 0 22px rgba(0, 229, 255, 0.14), 0 12px 35px rgba(0, 0, 0, 0.85);
+    }
+
+    .wallpaper-card .card-meta {
+      color: #00e5ff;
+    }
+
+    .wallpaper-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 4px;
+    }
+
+    .wp-item {
+      position: relative;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: #050608;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wp-item img {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      object-fit: cover;
+      display: block;
+    }
+
+    .wp-download {
+      display: block;
+      width: 100%;
+      padding: 8px 6px;
+      background: rgba(8, 12, 20, 0.92);
+      border-top: 1px solid rgba(0, 229, 255, 0.35);
+      color: #00e5ff;
+      text-align: center;
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .wp-download:hover {
+      background: #00e5ff;
+      color: #050608;
+    }
   </style>
 </head>
 <body>
@@ -579,6 +634,58 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
           allowfullscreen>
         </iframe>
+      </div>
+    </article>
+
+    <!-- FREE SMARTPHONE WALLPAPERS (PACK 01) -->
+    <article class="release-card wallpaper-card">
+      <div class="card-meta">Fan Vault // Pack 01</div>
+      <h2 class="card-title">Free 9:16 Wallpapers</h2>
+      <p class="card-desc">
+        OLED dark lock screens engineered for your phone. Tap download to save full resolution.
+      </p>
+
+      <div class="wallpaper-grid">
+        <div class="wp-item">
+          <img src="wallpapers/wp-01.jpg" alt="K.L.O.E. Studio Throne Wallpaper" loading="lazy">
+          <a href="wallpapers/wp-01.jpg" download="KLOE-Wallpaper-01.jpg" class="wp-download">Download 01</a>
+        </div>
+        <div class="wp-item">
+          <img src="wallpapers/wp-02.jpg" alt="K.L.O.E. Console Shadows Wallpaper" loading="lazy">
+          <a href="wallpapers/wp-02.jpg" download="KLOE-Wallpaper-02.jpg" class="wp-download">Download 02</a>
+        </div>
+        <div class="wp-item">
+          <img src="wallpapers/wp-03.jpg" alt="K.L.O.E. Gothic Spotlight Wallpaper" loading="lazy">
+          <a href="wallpapers/wp-03.jpg" download="KLOE-Wallpaper-03.jpg" class="wp-download">Download 03</a>
+        </div>
+        <div class="wp-item">
+          <img src="wallpapers/wp-04.jpg" alt="K.L.O.E. Crossroad Tube Amp Wallpaper" loading="lazy">
+          <a href="wallpapers/wp-04.jpg" download="KLOE-Wallpaper-04.jpg" class="wp-download">Download 04</a>
+        </div>
+        <div class="wp-item">
+          <img src="wallpapers/wp-05.jpg" alt="K.L.O.E. Neon Wires OLED Wallpaper" loading="lazy">
+          <a href="wallpapers/wp-05.jpg" download="KLOE-Wallpaper-05.jpg" class="wp-download">Download 05</a>
+        </div>
+        <div class="wp-item">
+          <img src="wallpapers/wp-06.jpg" alt="K.L.O.E. Chrome Thorn Throne Wallpaper" loading="lazy">
+          <a href="wallpapers/wp-06.jpg" download="KLOE-Wallpaper-06.jpg" class="wp-download">Download 06</a>
+        </div>
+        <div class="wp-item">
+          <img src="wallpapers/wp-07.jpg" alt="K.L.O.E. Modular Synth Altar Wallpaper" loading="lazy">
+          <a href="wallpapers/wp-07.jpg" download="KLOE-Wallpaper-07.jpg" class="wp-download">Download 07</a>
+        </div>
+        <div class="wp-item">
+          <img src="wallpapers/wp-08.jpg" alt="K.L.O.E. Static Cathedral Wallpaper" loading="lazy">
+          <a href="wallpapers/wp-08.jpg" download="KLOE-Wallpaper-08.jpg" class="wp-download">Download 08</a>
+        </div>
+        <div class="wp-item">
+          <img src="wallpapers/wp-09.jpg" alt="K.L.O.E. Electric Amp Sparks Wallpaper" loading="lazy">
+          <a href="wallpapers/wp-09.jpg" download="KLOE-Wallpaper-09.jpg" class="wp-download">Download 09</a>
+        </div>
+        <div class="wp-item">
+          <img src="wallpapers/wp-10.jpg" alt="K.L.O.E. Bayou Piano Wallpaper" loading="lazy">
+          <a href="wallpapers/wp-10.jpg" download="KLOE-Wallpaper-10.jpg" class="wp-download">Download 10</a>
+        </div>
       </div>
     </article>
 
